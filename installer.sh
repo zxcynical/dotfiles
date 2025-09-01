@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 sudo pacman -Syu
 sudo pacman -S --needed --noconfirm base-devel
 
@@ -5,7 +7,7 @@ git clone https://aur.archlinux.org/yay.git /tmp/buildyay
 cd /tmp/buildyay
 makepkg -si --noconfirm
 
-cd
+cd $HOME/dotfiles
 
 PKG_FILE="pckgs.txt"
 
@@ -30,10 +32,12 @@ ninja -C build install
 cd
 sudo rm -rf .config/
 cd dotfiles
-mv .config .git .gitignore. .zshrc ../
+mv .config .git .gitignore. .zshrc ../ -r
 
 cd $HOME/.config/hypr/confs
-mkdir -p /etc/sddm.conf.d
-mv autologin.conf /etc/sddm.conf.d/
-mkdir -p /etc/xdg/reflector
-mv reflector.conf /etc/xdg/reflector/
+sudo mkdir -p /etc/sddm.conf.d
+sudo mv autologin.conf /etc/sddm.conf.d/
+sudo mkdir -p /etc/xdg/reflector
+sudo mv reflector.conf /etc/xdg/reflector/
+cd ..
+rmdir confs
