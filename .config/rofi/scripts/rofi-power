@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+rofi_command() {
+  rofi -dmenu -i -config "$HOME/.config/rofi/power.rasi"
+}
+
+shutdown="󰐥 | Shutdown"
+reboot=" | Restart"
+lock=" | Lock"
+
+options="$shutdown\n$reboot\n$lock"
+
+chosen="$(echo -e "$options" | rofi_command)"
+echo "$chosen"
+case $chosen in
+"$shutdown")
+  systemctl poweroff
+  ;;
+"$reboot")
+  systemctl reboot
+  ;;
+"$lock")
+  hyprlock
+  ;;
+esac
