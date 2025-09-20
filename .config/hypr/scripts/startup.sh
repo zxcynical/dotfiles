@@ -2,20 +2,13 @@ while pgrep -x hyprlock > /dev/null; do
 	sleep 1
 done
 
-firefox&
-sleep 1
-hyprctl dispatch focuswindow class:firefox
-hyprctl dispatch movetoworkspacesilent 3
-
+hyprctl dispatch workspace 1
 vesktop&
 sleep 1
-hyprctl dispatch focuswindow class:vesktop
-hyprctl dispatch movetoworkspacesilent 1
-
+hyprctl dispatch workspace 3
+firefox&
+sleep 1
+hyprctl dispatch workspace 4
 ghostty -e "rmpc"&
 sleep 1
-hyprctl dispatch focuswindow class:com.mitchellh.ghostty
-hyprctl dispatch movetoworkspacesilent 4
-
-hyprctl dispatch workspace 4
-hyprctl dispatch moveworkspacetomonitor 4 DP-1
+hyprctl dispatch workspace 2
