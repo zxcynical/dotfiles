@@ -20,48 +20,54 @@
         },
         {
             "type": "custom",
-            "format": "┌──────────────────────────────────────────┐"
+            "format": "┌─────────────────────────────────────┐"
         },
         {
             "type": "os",
+			"format": "{name>24} {arch} |",
             "key": "| OS",
             "keyColor": "red"
         },
         {
             "type": "kernel",
+			"format": "{>12} {} |",
             "key": "| Kernel",
             "keyColor": "red"
         },
 		{
             "type": "uptime",
+			"format": "{formatted>27} |",
             "key": "| Uptime",
             "keyColor": "red"
         },
 		{
             "type": "command",
+			"format": "{>27} |",
             "key": "| OS Age",
             "keyColor": "31",
             "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
         },
 		{
             "type": "wm",
+			"format": "{>15} {version} ({protocol-name}) |",
             "key": "| WM",
             "keyColor": "yellow"
         },
         {
             "type": "terminal",
+			"format": "{>13} {version} |",
             "key": "| Terminal",
             "keyColor": "yellow"
         },
 		{
             "type": "packages",
-			"format": "{>30} |",
+			"format": "{all>25} |",
             "key": "| Packages",
             "keyColor": "green"
         },
         {
             "type": "custom",
-            "format": "└──────────────────────────────────────────┘"
+            "format": "└─────────────────────────────────────┘"
         },
         "break",
         {
@@ -70,30 +76,30 @@
         },
         {
             "type": "custom",
-            "format": "┌──────────────────────────────────────────┐"
+            "format": "┌─────────────────────────────────────┐"
         },
         {
             "type": "cpu",
-            "format": "{1>35} |",
+            "format": "{1>30} |",
             "key": "| CPU",
             "keyColor": "blue"
         },
         {
             "type": "gpu",
-            "format": "{2>35} |",
+            "format": "{2>30} |",
             "key": "| GPU",
             "keyColor": "blue"
         },
         {
             "type": "command",
-			"text": "free -m | awk 'NR==2{printf \"%.2f GiB / %.2f GiB\",$3/1024,$2/1024}'",
-			"format": "{>32} |",
-            "key": "| Memory",
-            "keyColor": "blue"
+			"format": "{>30} |",
+            "key": "| RAM",
+            "keyColor": "blue",
+			"text": "free -m | awk 'NR==2{printf \"%.2f GiB / %.2f GiB\",$3/1024,$2/1024}'"
         },      
         {
             "type": "custom",
-            "format": "└──────────────────────────────────────────┘"
+            "format": "└─────────────────────────────────────┘"
         }
     ]
 }
