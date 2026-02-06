@@ -3,7 +3,7 @@
 	
 	"logo":
 	{
-		"color": {"1": "magenta"}
+		"color": {"1": "magenta", "2": "magenta"}
 	},
 	
 	"display":
