@@ -3,7 +3,6 @@ font-family-bold        = "JetBrainsMono NF Bold"
 font-family-italic      = "JetBrainsMono NF Italic"
 font-family-bold-italic = "JetBrainsMono NF Bold Italic"
 
-title                   = " "
 window-decoration       = none
 confirm-close-surface   = false
 resize-overlay          = never
