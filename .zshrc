@@ -2,7 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="jtriley"
 
-zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 13
 
 plugins=(git)
@@ -29,6 +29,8 @@ rangercd() {
 eval $(thefuck --alias)
 
 export PATH=$PATH:/home/zxcynical/.cargo/bin
+export PATH=/home/zxcynical/.local/bin:$PATH
+export LIBVIRT_DEFAULT_URI="qemu:///system"
 
 alias fetch="fastfetch --logo $HOME/.config/fastfetch/logo.txt"
 #alias fetch="fastfetch --logo arch3"

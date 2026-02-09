@@ -5,5 +5,5 @@ done
 mpc volume 20
 mpc repeat
 mpc random
-mpc load random\ stuffz\ \[refined\]
+mpc load random\ stuffz
 mpc play

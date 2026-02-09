@@ -1,7 +1,6 @@
 {
 	"layer": "top",
 	"position": "top",
-	"mode": "dock",
 	"height": 30,
 	"spacing": 4,
 	"exclusive": true,
@@ -11,7 +10,7 @@
 	"modules-left":
 	[
 		"cava",
-		"hyprland/workspaces",
+		"niri/workspaces",
 		"tray"
 	],
 	"modules-center":
@@ -20,7 +19,7 @@
 	],
 	"modules-right":
 	[
-		"hyprland/language",
+		"niri/language",
 		"cpu",
 		"memory",
 		"custom/powermenu",
@@ -49,26 +48,13 @@
 		"format-icons" : ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ]
 	},
 
-	"hyprland/workspaces":
+	"niri/workspaces":
 	{
 		"on-click": "activate",
-		"format": "{name}",
-		"all-outputs": true,
+		"format": "{value}",
+		"all-outputs": false,
 		"disable-scroll": false,
-		"active-only": false,
-		"persistent-workspaces":
-		{
-			"1": [],
-			"2": [],
-			"3": [],
-			"4": [],
-			"5": [],
-			"6": [],
-			"7": [],
-			"8": [],
-			"9": [],
-			"10": []
-		}
+		"active-only": false
 	},
 
 	"tray":
@@ -93,7 +79,7 @@
 		"on-click-right": "mpc next"
 	},
 
-	"hyprland/language":
+	"niri/language":
 	{
 		"format": "{}",
 		"format-en": "EN",

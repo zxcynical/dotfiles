@@ -1,7 +1,6 @@
 return {
 	'nvim-treesitter/nvim-treesitter',
 	build = ':TSUpdate',
-	main = 'nvim-treesitter.configs',
 	opts = {
 		ensure_installed = {
 			'asm',
@@ -36,6 +35,7 @@ return {
 			'json',
 			'json5',
 			'julia',
+			'kdl',
 			'kotlin',
 			'llvm',
 			'lua',
@@ -78,4 +78,5 @@ return {
 		},
 		indent = { enable = true, disable = { 'ruby' } },
 	},
+	main = 'nvim-treesitter.config',
 }
